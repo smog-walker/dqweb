@@ -31,13 +31,6 @@ const alias = [
 ];
 
 if (srcDir) {
-  for (const entry of fs.readdirSync(srcDir)) {
-    if (!/\.jpe?g$/i.test(entry)) continue;
-    const from = path.resolve(srcDir, entry);
-    const to = path.resolve(destDir, entry);
-    fs.copyFileSync(from, to);
-  }
-
   for (const [id, filename] of alias) {
     const from = path.resolve(srcDir, filename);
     const to = path.resolve(destDir, `${id}.jpg`);
