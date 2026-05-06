@@ -162,7 +162,7 @@ export default function CheckoutPage() {
             onClick={() => {
               if (!address.trim()) return;
               const order = placeOrder();
-              if (order) router.push(`/orders/${order.id}`);
+              if (order) router.push(`/orders/detail?id=${encodeURIComponent(order.id)}`);
             }}
           >
             提交订单

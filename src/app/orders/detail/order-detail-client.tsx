@@ -1,14 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { useDemo } from '../../../lib/demo-store';
 
-export default function OrderDetailPage() {
-  const params = useParams<{ id: string }>();
+export default function OrderDetailClient() {
+  const sp = useSearchParams();
+  const id = sp.get('id') ?? '';
   const { orders } = useDemo();
-  const order = useMemo(() => orders.find((o) => o.id === params.id), [orders, params.id]);
+  const order = useMemo(() => orders.find((o) => o.id === id), [orders, id]);
 
   if (!order) {
     return (

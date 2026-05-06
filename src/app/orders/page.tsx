@@ -22,7 +22,7 @@ export default function OrdersPage() {
           {orders.map((o) => (
             <Link
               key={o.id}
-              href={`/orders/${o.id}`}
+              href={`/orders/detail?id=${encodeURIComponent(o.id)}`}
               className="card"
               style={{ padding: 14, display: 'grid', gap: 6 }}
             >

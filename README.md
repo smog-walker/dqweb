@@ -16,6 +16,12 @@ npm run build
 npm run start
 ```
 
+### GitHub Pages
+
+- 已配置 GitHub Actions 自动部署（推送到 main 后自动更新 Pages）
+- 仓库 Settings → Pages → Build and deployment 选择 “GitHub Actions”
+- 页面地址通常为：`https://smog-walker.github.io/dqweb/`
+
 ### 图片资源
 
 - 页面使用 `public/pac/*.jpg`（数字命名）作为静态资源路径
