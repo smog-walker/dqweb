@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -109,10 +110,12 @@ export default function CheckoutPage() {
                     alignItems: 'center',
                   }}
                 >
-                  <img
+                  <Image
                     src={l.product.image}
                     alt={l.product.name}
-                    style={{ width: 80, height: 60, borderRadius: 10, objectFit: 'cover' }}
+                    width={80}
+                    height={60}
+                    style={{ borderRadius: 10, objectFit: 'cover' }}
                   />
                   <div>
                     <div style={{ fontWeight: 900 }}>{l.product.name}</div>

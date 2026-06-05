@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useDemo } from '../../lib/demo-store';
 
@@ -28,10 +29,12 @@ export default function CartPage() {
                 className="card"
                 style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: 12, padding: 12 }}
               >
-                <img
+                <Image
                   src={line.product.image}
                   alt={line.product.name}
-                  style={{ width: 120, height: 90, borderRadius: 10, objectFit: 'cover' }}
+                  width={120}
+                  height={90}
+                  style={{ borderRadius: 10, objectFit: 'cover' }}
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
                   <div>

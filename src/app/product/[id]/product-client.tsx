@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
@@ -19,7 +20,14 @@ export default function ProductClient({ product }: { product: Product }) {
     <div className="layout" style={{ gridTemplateColumns: '1fr' }}>
       <div className="section">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-          <img className="img" src={product.image} alt={product.name} style={{ height: 320 }} />
+          <Image
+            className="img"
+            src={product.image}
+            alt={product.name}
+            width={640}
+            height={320}
+            style={{ width: '100%', height: 320, objectFit: 'cover' }}
+          />
           <div>
             <div className="h1">{product.name}</div>
             <div className="priceRow">

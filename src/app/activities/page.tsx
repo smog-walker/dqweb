@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { ActivityKey } from '../../lib/demo-data';
+import { pac } from '../../lib/demo-data';
 import { useDemo } from '../../lib/demo-store';
 
 const merchants = ['匠心漆坊', '云漆工房', '墨彩斋'];
@@ -301,7 +302,7 @@ export default function ActivitiesPage() {
                         name: `定制漆器 · ${selMerchant} · ${selShape} · ${selBody} · ${selPattern}`,
                         price: estimatePrice,
                         originalPrice: estimatePrice + 200,
-                        image: '/pac/5.jpg',
+                        image: pac('鸿奕漆器.jpg'),
                         description: detail,
                         category: '定制漆器',
                         stock: 1,

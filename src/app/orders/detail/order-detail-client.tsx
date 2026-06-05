@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
@@ -39,10 +40,12 @@ export default function OrderDetailClient() {
             className="card"
             style={{ padding: 12, display: 'grid', gridTemplateColumns: '80px 1fr auto', gap: 10 }}
           >
-            <img
+            <Image
               src={l.product.image}
               alt={l.product.name}
-              style={{ width: 80, height: 60, borderRadius: 10, objectFit: 'cover' }}
+              width={80}
+              height={60}
+              style={{ borderRadius: 10, objectFit: 'cover' }}
             />
             <div>
               <div style={{ fontWeight: 900 }}>{l.product.name}</div>

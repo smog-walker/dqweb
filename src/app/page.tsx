@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { products } from '../lib/demo-data';
 
@@ -8,7 +9,7 @@ export default function HomePage() {
       <div className="grid">
         {products.map((p) => (
           <div key={p.id} className="card">
-            <img className="img" src={p.image} alt={p.name} />
+            <Image className="img" src={p.image} alt={p.name} width={400} height={300} />
             <div className="cardBody">
               <div className="name">{p.name}</div>
               <div className="priceRow">
